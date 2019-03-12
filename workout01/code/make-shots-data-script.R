@@ -133,7 +133,12 @@ GSW_scatter <- ggplot(data = GSW) + annotation_custom(court_image, -250, 250, -5
 
 #save the image in pdf format
 pdf(file = '../images/gsw-shot-charts.pdf', width = 8, height = 7)
-png(file = '../images/gsw-shot-charts.png', width = 8, height = 7)
+GSW_scatter
+dev.off()
+
+png(file = '../images/gsw-shot-charts.png', width = 768, height = 672)
+GSW_scatter
+dev.off()
 
 
 
