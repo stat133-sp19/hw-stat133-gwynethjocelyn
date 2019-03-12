@@ -12,3 +12,4 @@
 `shot_distance`: distance to the basket (measured in feet)
 `x`: the court x-coordinates (measured in inches) where a shot occured
 `y`: the court y-coordinates (measured in inches) where a shot occured
+s
