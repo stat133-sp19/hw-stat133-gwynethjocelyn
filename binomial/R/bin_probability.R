@@ -22,7 +22,7 @@ bin_probability <- function(success, trials, prob) {
   check_trials(trials)
   check_prob(prob)
   check_success(success, trials)
-
-  probability = bin_choose(trials,success) * prob^(success) * (1-prob)^(trials-success)
-  return(probability)
+  c <- bin_choose(trials, success)
+  p <- c * prob^(success) * (1-prob)^(trials-success)
+  return(p)
 }
