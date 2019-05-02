@@ -1,4 +1,4 @@
-### Overview
+## Overview
 `binomial` allows users to calculate the probability for a random variable with a binomial distribution. It also displays and visualizes the binomial probability distribution and the binomial cumulative distribution given certain the number of trials done and the probability of success for a given trial.  
 
 - `bin_variable()` lists the parameters of the binomial random variable.
@@ -19,7 +19,7 @@
 This package is developed to make calculations and visualization associated with the binomial distribution simpler and faster.
 
 ## Usage
-#####creating binomial random variable
+###creating binomial random variable
 ```{r}
 library(binomial)
 
@@ -33,7 +33,7 @@ bin1
 #- number of trials:  10 
 #- prob of success :  0.3 
 ```
-#####summary of bin1
+###summary of bin1
 ```{r}
 summary(bin1)
 
@@ -52,7 +52,7 @@ summary(bin1)
 #- kurtosis: -0.1238095 
 ```
 
-#####the number of combinations where 2 successes can occur in 10 trials
+###the number of combinations where 2 successes can occur in 10 trials
 ```{r}
 bin_choose(n = 10, k = 2)
 
@@ -60,18 +60,18 @@ bin_choose(n = 10, k = 2)
 #45
 ```
 
-#####the binomial probability distribution
+###the binomial probability distribution
 ```{r}
 dis1 <- bin_distribution(trials = 10, prob = 0.3)
 dis1
 ```
 
-#####plotting the binomial probability distribution
+###plotting the binomial probability distribution
 ```{r}
 plot(dis1)
 ```
 
-#####calculate the mean of the random variable
+###calculate the mean of the random variable
 ```{r}
 bin_mean(trials = 10, prob = 0.3)
 
