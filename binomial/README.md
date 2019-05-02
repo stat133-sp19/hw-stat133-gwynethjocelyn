@@ -3,52 +3,79 @@
 
 - `bin_variable()` lists the parameters of the binomial random variable.
 - `summary()` gives the summary of `bin_variable()`. It will list the random variable's mean, variance, mode, skewness and kurtosis.
-– `bin_choose()` gives the number of possible combinations for a particular number of successes to occur in a set number of trials.
-– `bin_probability()` will calculate the probability of getting the number of successes specified in the number of desired trials
-– `bin_distribution()` will calculate probabilities of the number of successes in a fixed number of random trials performed under identical conditions
-– `bin_cumulative()` calculates probability distribution and the cumulative probabilities
-- `plot()` will plot the `bin_distribution()` histogram or plot the graph of binomial cumulative distribution of `bin_cumulative()`
+- `bin_mean()` calculates the mean of the binomial random variable
+- `bin_variance()` calculates the variance of the binomial random variable
+- `bin_mode()` calculates the mode of the binomial random variable
+- `bin_skewness()` calculates the skewness of the binomial random variable
+- `bin_kurtosis()` calculates the kurtosis of the binomial random variable
+– `bin_choose()` gives the number of possible combinations in which the desired number of successes can occur in the specified number of trials.
+– `bin_probability()` gives the probability of getting the desired number of successes in the specified number of trials trials given the probability of success in each trial.
+– `bin_distribution()` gives a table of probabilities of each number of successes in a fixed number of random trials given the probability of success in each trial.
+– `bin_cumulative()` gives a table of both the probabilities and the cumulative probabilities of each number of successes.
+- `plot()` can be applied to objects created by `bin_distribution()`  to plot the binomial probability distribution histogram or applied to `bin_cumulative()` to plot binomial cumulative distribution graph.
 
-
-## Additional Functions
-The "`binomial`" package also includes other functionalities to examine the properties of the binomial distribution.
-- `bin_mean()` will calculate the mean of the binomial distribution
-- `bin_variance()` will calculate the variance of the binomial distribution
-- `bin_mode()` will calculate the mode of the binomial distribution
-- `bin_skewness()` will calculate the skewness of the binomial distribution
-- `bin_kurtosis()` will calculate the kurtosis of the binomial distribution
 
 ## Motivation
-This package is to discover and calculate the binomial distribution in a faster and more efficient way.
+This package is developed to make calculations and visualization associated with the binomial distribution simpler and faster.
 
 ## Usage
+#####creating binomial random variable
 ```{r}
 library(binomial)
 
-#setting our binomial random variable
-bin1 <- bin_variable(trials = 5, prob = 0.5)
+bin1 <- bin_variable(trials = 10, prob = 0.3)
 bin1
+
+#output:
+#"Binomial variable"
+#
+#Parameters
+#- number of trials:  10 
+#- prob of success :  0.3 
 ```
+#####summary of bin1
 ```{r}
-#a summary of our binomial random variable
 summary(bin1)
-```
-```{r}
-#the number of combinations where 2 successes can occur in 5 trials
-bin_choose(n = 5, k = 2)
-```
-```{r}
-#the binomial distribution
-bin2 <- bin_distribution(trials = 10, prob = 0.3)
-bin2
-```
-```{r}
-#plotting the histogram of the bin2
-plot(bin2)
-```
-```{r}
-# Looking for measurements from a binomial distribution - the mean
-bin_mean(trials = 6, prob = 0.3)
+
+#output:
+#"Summary Binomial"
+#
+#Parameters
+#- number of trials: 10 
+#- prob of success: 0.3 
+#
+#Measures
+#- mean	  : 3 
+#- variance: 2.1 
+#- mode	  : 3 
+#- skewness: 0.2760262 
+#- kurtosis: -0.1238095 
 ```
 
+#####the number of combinations where 2 successes can occur in 10 trials
+```{r}
+bin_choose(n = 10, k = 2)
+
+#output:
+#45
+```
+
+#####the binomial probability distribution
+```{r}
+dis1 <- bin_distribution(trials = 10, prob = 0.3)
+dis1
+```
+
+#####plotting the binomial probability distribution
+```{r}
+plot(dis1)
+```
+
+#####calculate the mean of the random variable
+```{r}
+bin_mean(trials = 10, prob = 0.3)
+
+#output:
+#3
+```
 
