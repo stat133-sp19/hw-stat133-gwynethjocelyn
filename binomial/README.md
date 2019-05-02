@@ -18,7 +18,7 @@
 ## Motivation
 This package is developed to make calculations and visualization associated with the binomial distribution simpler and faster.
 
-## Usage
+## Usage  
 ###creating binomial random variable
 ```{r}
 library(binomial)
@@ -32,8 +32,8 @@ bin1
 #Parameters
 #- number of trials:  10 
 #- prob of success :  0.3 
-```
-###summary of bin1
+```  
+###summary of bin1 
 ```{r}
 summary(bin1)
 
