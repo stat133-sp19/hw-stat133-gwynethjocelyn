@@ -100,7 +100,7 @@ bin_choose(n = 5, k = 2)
 ```
 
 ###Binomial Probability
-Users can immediately calcualte the probability of getting k success in n trials given p probability of success in each trial by calling the function `bin_probability()`. This function takes in three arguments:
+Users can immediately calculate the probability of getting k success in n trials given p probability of success in each trial by calling the function `bin_probability()`. This function takes in three arguments:
 1) `success` -- the number of success  
 2) `trials` -- the number of trials  
 3) `prob` -- the probability of success in each trial
