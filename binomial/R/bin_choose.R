@@ -14,6 +14,6 @@ bin_choose <- function(n,k) {
   if (any(k>n)) {
     stop("k cannot be greater than n")
   }
-  choose = factorial(n)/(factorial(k)*factorial(n-k))
-  return(choose)
+  c <- factorial(n)/(factorial(k)*factorial(n-k))
+  return(c)
 }
